@@ -1,0 +1,54 @@
+body{
+	background-image: url("snakesladder3.jpg");
+}
+
+.table {
+	background-color: white;
+}
+
+h1 {
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+#insert {
+	margin-bottom: 30px;
+	margin-left: 50px;
+}
+
+table th#turn {
+	width: 150px;
+}
+
+table th#score {
+	width: 100px;
+}
+
+table th#roll {
+	width: 100px;
+}
+
+table th#msg {
+	width: 250px;
+}
+
+table th#name {
+	width: 200px;
+}
+
+table td#remove {
+	width: 100px;
+}
+
+.table {
+	margin-left: 50px;
+	width: 90%;
+}
+
+#reset {
+	margin-left: 50px;
+}
+
+h4 {
+	margin-left: 50px;
+}

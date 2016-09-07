@@ -1,0 +1,67 @@
+<head>
+  <title>SnakeAndLadders</title>
+</head>
+
+<body>
+<div class="container">
+  <h1><center>Snakes and Ladders</center></h1>
+
+  {{>insertPlayer}}
+  {{> table}}
+
+  {{>reset}}
+</div>
+</body>
+
+<template name="insertPlayer">
+  {{#if lessthanFourPlayers }}
+  <h4><b>Insert 4 Players to start the game!</b></h4>
+    <form id="insert">
+      <input type="text" name="PlayerName">
+      <input type="submit" value="Add Player">
+    </form>
+  {{/if}}
+</template>
+
+<template name="table">
+  <table class="table table-inverse">
+    <thead>
+      <tr>
+        <th id="turn">Turn</th>
+        <th id="name">Name</th>
+        <th id="score">Score</th>
+        <th id="roll">Roll</th>
+        <th id="msg"></th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      {{#each player}}
+      {{>roll}}
+      {{/each}}
+    </tbody>
+  </table>
+</template>
+
+<template name="roll">
+  <tr>
+    <td>{{turn}}</td>
+    <td>{{name}}</td>
+    <td>{{score}}</td>
+    <td>
+    {{ #if enoughPlayers }}
+      <button id="roll" nextId="{{nextPlayer}}" class= "{{_id}} btn btn-primary">Roll</button>
+    {{/if}}
+    </td>
+    <td>
+      {{msg}}<br>{{msg2}}<br>{{msg3}}
+    </td>
+    <td>
+      <button id="remove" class="btn btn-danger">Remove</button>
+    </td>
+  </tr>
+</template>
+
+<template name="reset">
+  <button id="reset" class="btn btn-primary">Reset</button>
+</template>
